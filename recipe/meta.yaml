@@ -21,7 +21,7 @@ requirements:
     - perl
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - {{ stdlib('c') }}
     - qt6-main {{ version }}             # [build_platform != target_platform]
     - {{ cdt('mesa-libgl-devel') }}      # [linux]
     - {{ cdt('mesa-libegl-devel') }}     # [linux]
@@ -71,5 +71,5 @@ about:
 extra:
   recipe-maintainers:
     - jschueller
-    #- conda-forge/qt-main
+    - conda-forge/qt-main
   feedstock-name: qt-quick3d
