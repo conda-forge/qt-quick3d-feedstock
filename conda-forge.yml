@@ -1,4 +1,5 @@
-bot: {automerge: true}
+bot:
+  automerge: true
 build_platform:
   linux_aarch64: linux_64
   osx_arm64: osx_64
@@ -10,4 +11,7 @@ github:
   tooling_branch_name: main
 os_version:
   linux_64: cos7
+provider:
+  linux_aarch64: default
+  linux_ppc64le: default
 test: native_and_emulated
