@@ -9,9 +9,9 @@ source:
   md5: c43d292ce2576f8bd7a67b9607a2e483
 
 build:
-  number: 0
+  number: 1
   # 2-stage build also needed
-  skip: true  # [build_platform != target_platform]
+  # skip: true  # [build_platform != target_platform]
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage('qt6-quick3d', max_pin='x.x') }}
@@ -34,8 +34,9 @@ requirements:
     - libvulkan-headers                  # [not osx]
     - libvulkan-loader                   # [not osx]
     - qt6-main {{ version }}
-    - libzlib
     - zlib
+  run:
+    - qt6-main {{ version }}
 
 test:
   commands:
