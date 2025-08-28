@@ -1,4 +1,4 @@
-{% set version = "6.9.1" %}
+{% set version = "6.9.2" %}
 
 package:
   name: qt6-quick3d
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://download.qt.io/official_releases/qt/{{ version.rpartition('.')[0] }}/{{ version }}/submodules/qtquick3d-everywhere-src-{{ version }}.tar.xz
-  md5: 8e76346a997e4bb06d74077b77f52b2d
+  md5: b6a97af3570dbefff164dd1b51bc9350
 
 build:
   number: 0
   # 2-stage build also needed
-  # skip: true  # [build_platform != target_platform]
+  skip: true  # [build_platform != target_platform]
   detect_binary_files_with_prefix: true
   run_exports:
     - {{ pin_subpackage('qt6-quick3d', max_pin='x.x') }}
