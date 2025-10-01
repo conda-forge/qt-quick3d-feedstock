@@ -10,7 +10,7 @@ source:
 
 build:
   number: 0
-  # 2-stage build also needed
+  # 2-stage build also needed :)
   # skip: true  # [build_platform != target_platform]
   detect_binary_files_with_prefix: true
   run_exports:
