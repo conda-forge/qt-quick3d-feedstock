@@ -1,4 +1,4 @@
-{% set version = "6.9.3" %}
+{% set version = "6.10.0" %}
 
 package:
   name: qt6-quick3d
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://download.qt.io/official_releases/qt/{{ version.rpartition('.')[0] }}/{{ version }}/submodules/qtquick3d-everywhere-src-{{ version }}.tar.xz
-  md5: bcb4656735be795a3d86fe28ec245ea3
+  md5: 1250d2c0886e27828e5b1f244179ceb8
 
 build:
   number: 0
