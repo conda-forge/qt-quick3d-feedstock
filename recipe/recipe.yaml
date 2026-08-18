@@ -26,6 +26,8 @@ requirements:
         - qt6-main ${{ version }}.*
         - qt6-quick3d ${{ version }}.*
   host:
+    - libvulkan-headers
+    - libvulkan-loader
     - qt6-main ${{ version }}.*
     - zlib
     - if: linux
@@ -34,10 +36,6 @@ requirements:
         - libegl-devel
         - libopengl-devel
         - libglx-devel
-    - if: not osx
-      then:
-        - libvulkan-headers
-        - libvulkan-loader
   run:
     - qt6-main ${{ version }}.*
   run_exports:
